@@ -16,6 +16,9 @@ import {
 
 const Tab = createBottomTabNavigator();
 export default function App() {
+  numberFormat = (num) =>
+    "Rp" + num.toFixed(2).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,");
+
   return (
     <NavigationContainer>
       <Tab.Navigator
@@ -27,7 +30,7 @@ export default function App() {
                 <Foundation
                   name="home"
                   size={24}
-                  color={focused ? "#212121" : "#6D7588"}
+                  color={focused ? "#1E61D4" : "#6D7588"}
                 />
               );
             } else if (route.name === "Artikel") {
@@ -35,7 +38,7 @@ export default function App() {
                 <MaterialIcons
                   name="article"
                   size={24}
-                  color={focused ? "#212121" : "#6D7588"}
+                  color={focused ? "#1E61D4" : "#6D7588"}
                 />
               );
             } else if (route.name === "Merch") {
@@ -43,7 +46,7 @@ export default function App() {
                 <FontAwesome
                   name="opencart"
                   size={24}
-                  color={focused ? "#212121" : "#6D7588"}
+                  color={focused ? "#1E61D4" : "#6D7588"}
                 />
               );
             } else if (route.name === "Adkesma") {
@@ -51,7 +54,7 @@ export default function App() {
                 <Ionicons
                   name="chatbox"
                   size={24}
-                  color={focused ? "#212121" : "#6D7588"}
+                  color={focused ? "#1E61D4" : "#6D7588"}
                 />
               );
             } else if (route.name === "Profil") {
@@ -59,14 +62,14 @@ export default function App() {
                 <Ionicons
                   name="person"
                   size={24}
-                  color={focused ? "#212121" : "#6D7588"}
+                  color={focused ? "#1E61D4" : "#6D7588"}
                 />
               );
             }
             return IconName;
           },
           header: () => null,
-          tabBarActiveTintColor: "#212121",
+          tabBarActiveTintColor: "#1E61D4",
           tabBarInactiveTintColor: "#6D7588",
           tabBarLabelStyle: {
             fontSize: 11,
