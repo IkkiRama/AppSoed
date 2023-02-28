@@ -1,0 +1,52 @@
+1E61D4 biru tua
+1A73E9 Biru muda
+
+
+ 
+<Foundation name="home" size={24} color="black" />
+<MaterialIcons name="article" size={24} color="black" />
+<Fontisto name="podcast" size={24} color="black" />
+
+<MaterialCommunityIcons name="circle-edit-outline" size={24} color="black" />
+
+import { MaterialIcons } from '@expo/vector-icons'; 
+import { Fontisto } from '@expo/vector-icons'; 
+import { MaterialCommunityIcons } from '@expo/vector-icons'; 
+
+
+Atas = Info Cuaca, Daily Playlist, Todo
+
+
+
+Tilik Fakultas, Komunitas, Info UKM, Merch
+
+Slide
+
+
+Games, Podcast,Layanan Unsoed, Komik, Media Partner
+
+
+
+
+Artikel
+Series Artikel
+
+
+Artikel Terbaru
+Rekomendasi Artikel
+
+
+
+
+
+Friend => FDF2F0 (merah) DE644A
+community = FCFBE8 (kuning) F6A316
+Music = FFEFFE (Pink) E668F1
+March = EFF6FE (Biru) 448BDE
+Games = F2F9F1 (Hijau) 60A85E
+Stiker = FCFBE5 (kuning) F3C025
+Step = F1F6FB (biru) 4C89CB
+
+
+
+All Mini App = 3381E0
