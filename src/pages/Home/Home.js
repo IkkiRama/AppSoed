@@ -13,6 +13,8 @@ import Navbar from "../../components/Navbar";
 import Fitur from "../../components/Fitur";
 import { LinearGradient } from "expo-linear-gradient";
 
+import { Ionicons } from "@expo/vector-icons";
+
 const HomeMain = () => {
   const [EventUtama, setEventUtama] = useState([
     {
@@ -172,7 +174,6 @@ const HomeMain = () => {
           style={{
             flex: 1,
             backgroundColor: "#1E61D4",
-            marginBottom: 200,
           }}
         >
           <View
@@ -368,40 +369,115 @@ const HomeMain = () => {
                 )}
               ></FlatList>
             </View>
+          </View>
+        </View>
 
-            {/* Series */}
-            <View style={{ marginTop: 20, backgroundColor: "#1E61D4" }}>
-              <Text style={styles.headerSection}>Rekomendasi Podcast</Text>
-              <Text style={styles.paragrafSection}>
-                Jangan Kelewatan Podcast Favorit Gensoed
-              </Text>
+        {/* Podcast */}
+        <View
+          style={{
+            marginTop: 20,
+            paddingBottom: 20,
+            backgroundColor: "#1E61D4",
+            // borderTopLeftRadius: 10,
+            // borderTopRightRadius: 10,
+          }}
+        >
+          <Text
+            style={{
+              fontWeight: "700",
+              fontSize: 22,
+              padding: 10,
+              paddingBottom: 0,
+              color: "#fff",
+            }}
+          >
+            Rekomendasi Podcast
+          </Text>
+          <Text style={{ fontSize: 14, color: "#fff", paddingLeft: 10 }}>
+            Jangan Kelewatan Podcast Favorit Gensoed
+          </Text>
 
-              <View style={{ marginTop: 15 }}>
-                <Pressable
+          <FlatList
+            data={Podcast}
+            horizontal
+            style={{ marginTop: 15 }}
+            showsHorizontalScrollIndicator={false}
+            renderItem={({ item }) => (
+              <Pressable
+                style={{
+                  width: 220,
+                  borderRadius: 10,
+                  borderWidth: 1,
+                  borderColor: "#79797a",
+                  elevation: 1,
+                  backgroundColor: "#fff",
+                  margin: 5,
+                }}
+              >
+                <Image
                   style={{
-                    width: 200,
-                    height: 300,
-                    borderRadius: 10,
-                    borderWidth: 1,
-                    borderColor: "#79797a",
-                    elevation: 1,
-                    backgroundColor: "#fff",
+                    width: "100%",
+                    height: 200,
+                    borderTopLeftRadius: 10,
+                    borderTopRightRadius: 10,
+                    marginBottom: 10,
+                  }}
+                  source={item.image}
+                ></Image>
+                <View
+                  style={{
+                    width: "100%",
+                    flexDirection: "row",
+                    justifyContent: "space-between",
+                    padding: 10,
                   }}
                 >
-                  <Image
-                    source={require("../../assets/Images/Podcast/Podcast1.jpeg")}
-                  ></Image>
-                  <View>
-                    <View>
-                      <Text>Diary Coki</Text>
-                      <Text>COKI</Text>
-                    </View>
-                    <Ionicons name="play-outline" size={24} color="black" />
+                  <View style={{ width: "80%", paddingRight: 5 }}>
+                    <Text
+                      style={{
+                        fontSize: 20,
+                        color: "#212121",
+                        fontWeight: "700",
+                      }}
+                      numberOfLines={1}
+                    >
+                      {item.nama}
+                    </Text>
+                    <Text
+                      style={{
+                        marginTop: 5,
+                        fontSize: 14,
+                        fontWeight: "500",
+                        color: "#212121",
+                      }}
+                    >
+                      {item.author}
+                    </Text>
                   </View>
-                </Pressable>
-              </View>
-            </View>
-          </View>
+
+                  <View
+                    style={{
+                      width: "20%",
+                      justifyContent: "center",
+                      alignItems: "center",
+                    }}
+                  >
+                    <Ionicons
+                      name="play-outline"
+                      size={24}
+                      color="black"
+                      style={{
+                        padding: 7,
+                        elevation: 3,
+                        borderRadius: 50,
+                        backgroundColor: "#fff",
+                      }}
+                    />
+                  </View>
+                </View>
+              </Pressable>
+            )}
+          ></FlatList>
         </View>
       </ScrollView>
     </View>
