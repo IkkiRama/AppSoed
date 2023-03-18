@@ -2,6 +2,7 @@ import { Text, TextInput, View } from "react-native";
 import Search from "../assets/Icons/search.svg";
 import Bell from "../assets/Icons/bell.svg";
 import { Image } from "react-native";
+import Colors from "../utils/Colors";
 
 const Navbar = () => {
   return (
@@ -50,7 +51,7 @@ const Navbar = () => {
             top: -5,
             left: 10,
             borderRadius: 5,
-            backgroundColor: "#E02954",
+            backgroundColor: Colors.red,
           }}
         >
           <Text
@@ -67,7 +68,7 @@ const Navbar = () => {
 
       <Image
         style={{ width: 33, height: 33, borderRadius: 50 }}
-        source={require("../assets/Images/rifki.jpg")}
+        source={require("../assets/Images/People/rifki.jpg")}
         // resizeMode="cover"
       ></Image>
     </View>
