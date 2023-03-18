@@ -10,12 +10,13 @@ import {
 } from "react-native";
 import Navbar from "../../components/Navbar";
 
-import Fitur from "../../components/Fitur";
+import Fiturs from "../../components/Fiturs";
 import { LinearGradient } from "expo-linear-gradient";
-
 import { Ionicons } from "@expo/vector-icons";
 
-const HomeMain = () => {
+import Colors from "../../utils/Colors";
+
+const HomeMain = ({ navigation }) => {
   const [EventUtama, setEventUtama] = useState([
     {
       image: require("../../assets/Images/s3.jpeg"),
@@ -100,7 +101,7 @@ const HomeMain = () => {
     },
 
     {
-      image: require("../../assets/Images/Artikel/series5.jpg"),
+      image: require("../../assets/Images/Artikel/BABI.jpg"),
       nama: "Membangun Kemandirian Finansial: Tips dan Trik Mengelola Uang",
       jumlah: 19,
     },
@@ -173,7 +174,7 @@ const HomeMain = () => {
         <View
           style={{
             flex: 1,
-            backgroundColor: "#1E61D4",
+            backgroundColor: Colors.primary,
           }}
         >
           <View
@@ -231,8 +232,8 @@ const HomeMain = () => {
               ></FlatList>
             </View>
 
-            {/* Fitur */}
-            <Fitur></Fitur>
+            {/* Fiturs */}
+            <Fiturs navigation={navigation}></Fiturs>
 
             {/* Merch */}
             <View style={{ marginTop: 30 }}>
@@ -377,7 +378,7 @@ const HomeMain = () => {
           style={{
             marginTop: 20,
             paddingBottom: 20,
-            backgroundColor: "#1E61D4",
+            backgroundColor: Colors.primary,
             // borderTopLeftRadius: 10,
             // borderTopRightRadius: 10,
           }}
@@ -408,7 +409,7 @@ const HomeMain = () => {
                   width: 220,
                   borderRadius: 10,
                   borderWidth: 1,
-                  borderColor: "#79797a",
+                  borderColor: Colors.description,
                   elevation: 1,
                   backgroundColor: "#fff",
                   margin: 5,
@@ -493,5 +494,5 @@ const styles = StyleSheet.create({
     color: "#212121",
   },
 
-  paragrafSection: { fontSize: 14, color: "#79797a" },
+  paragrafSection: { fontSize: 14, color: Colors.description },
 });

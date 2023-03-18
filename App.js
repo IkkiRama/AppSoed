@@ -1,5 +1,8 @@
 // In App.js in a new project
-import { NavigationContainer } from "@react-navigation/native";
+import {
+  getFocusedRouteNameFromRoute,
+  NavigationContainer,
+} from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import Home from "./src/pages/Home";
 import Artikel from "./src/pages/Artikel";
@@ -75,6 +78,23 @@ export default function App() {
             fontSize: 11,
             fontWeight: "600",
           },
+          tabBarStyle: ((route) => {
+            const routeName = getFocusedRouteNameFromRoute(route) ?? "";
+            if (routeName === "TilikFakultas") {
+              return { display: "none" };
+            } else if (routeName === "Podcast") {
+              return { display: "none" };
+            } else if (routeName === "Komunitas") {
+              return { display: "none" };
+            } else if (routeName === "InfoUKM") {
+              return { display: "none" };
+            } else if (routeName === "Games") {
+              return { display: "none" };
+            } else if (routeName === "Komik") {
+              return { display: "none" };
+            }
+            return;
+          })(route),
         })}
       >
         <Tab.Screen name="Home" component={Home} />

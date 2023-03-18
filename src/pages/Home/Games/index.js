@@ -1,14 +1,14 @@
 import { StyleSheet, Text, View } from "react-native";
 import React from "react";
 
-const TilikFakultas = () => {
+const Games = () => {
   return (
     <View>
-      <Text>TilikFakultas</Text>
+      <Text>Games</Text>
     </View>
   );
 };
 
-export default TilikFakultas;
+export default Games;
 
 const styles = StyleSheet.create({});
