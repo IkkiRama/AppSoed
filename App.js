@@ -92,6 +92,8 @@ export default function App() {
               return { display: "none" };
             } else if (routeName === "Komik") {
               return { display: "none" };
+            } else if (routeName === "DetailPostingan") {
+              return { display: "none" };
             }
             return;
           })(route),

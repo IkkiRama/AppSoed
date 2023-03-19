@@ -10,6 +10,7 @@ import Merch from "../Merch";
 import Games from "./Games";
 import Komik from "./Komik";
 import TilikFakultas from "./Tilik Fakultas";
+import DetailPostingan from "./Komunitas/DetailPostingan";
 
 const Stack = createNativeStackNavigator();
 
@@ -31,6 +32,9 @@ function Home() {
       <Stack.Screen name="Games" component={Games} />
       <Stack.Screen name="Komik" component={Komik} />
       <Stack.Screen name="TilikFakultas" component={TilikFakultas} />
+
+      {/* SUB KOMIK*/}
+      <Stack.Screen name="DetailPostingan" component={DetailPostingan} />
     </Stack.Navigator>
   );
 }
